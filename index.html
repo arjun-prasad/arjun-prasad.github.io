@@ -1,104 +1,13 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" >
 <head>
-<style>
-@import url('https://fonts.googleapis.com/css?family=Sacramento');
-
-$mattBlack:#212121;
-body{
-  background-color: $mattBlack;
-  font-family: 'Sacramento', cursive;
-}
-.container{
-  height:200px;
-  width:600px;
-  position:fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin:auto;
-  .title{
-    font-size:5rem;
-    color:rgba(255,255,255,0.5);
-    text-align:center;
-    text-shadow:0px 2px 1px orange,
-      0px 0px 6px orangered,0px 5px 10px rgba(0,0,0,1); 
-  }
-}
-.fireworks{
-  list-style-type:none;
-  padding:0;
-  li{
-    display:inline-block;
-    margin:20px;
-    height:50px;
-    width:50px;
-    border-radius:500px;
-    position:relative;
-    background-color: #8D6E63;
-    box-shadow:0px 2px 5px rgba(0,0,0,0.5);
-    &::before{
-      content:"";
-      position:absolute;
-      height:100%;
-      background-color: $mattBlack;
-      width:100%;
-      border-radius:500px;
-      top:-40%;
-      left:-30%;
-    }
-    &::after{
-      content:"";
-      position:absolute;
-      height:100%;
-      background-color: $mattBlack;
-      width:100%;
-      border-radius:500px;
-      top:-40%;
-      right:-30%;
-    }
-    span{
-      display:inline-block;
-      height:20px;
-      width:20px;
-      position:absolute;
-      left: 0;
-      right: 0;
-      margin:auto;
-      z-index:1;
-      border-bottom-left-radius:50px;
-      border-bottom-right-radius:50px;
-      border-top-right-radius:50px;
-      transform:rotate(45deg);
-      animation:fire 0.3s ease infinite;
-    }
-  }
-  @for $i from 1 through 6{
-    li:nth-child(#{$i}){
-      span{
-        animation-delay:#{$i*0.5}s;
-      }
-    }
-  }
-  
-}
-
-@keyframes fire{
-  0%,100%{
-    transform:rotate(55deg);
-    width:20px;
-    background: linear-gradient(90deg,orange,orangered);
-  }
-  50%{
-    transform:rotate(35deg);
-    width:18px;
-    background: linear-gradient(90deg,orangered,orange);
-  }
-}
-
-</style>
+  <meta charset="UTF-8">
+  <title>Happy Diwali</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
+<!-- partial:index.partial.html -->
 <div class="container">
 <div class="title">Happy Diwali</div>
 <ul class="fireworks">
@@ -110,6 +19,7 @@ body{
   <li><span></span></li>
 </ul>
 </div>
-
+<!-- partial -->
+  
 </body>
 </html>
